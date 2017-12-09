@@ -35,13 +35,13 @@ Before modifying any of the routes, a default route must be set to just `v1` of 
 2. Now when you curl the echo service, it should always return `v1` of the Hello World service.
 
     ```sh
-    curl http://[INGRESS_IP]/echo/universe  
+    curl http://$INGRESS_IP/echo/universe  
 
     {"greeting":{"hostname":"helloworld-service-v1-286408581-9204h","greeting":"Hello universe from helloworld-service-v1-286408581-9204h with 1.0","version":"1.0"},"
     ```
     
     ```sh
-    curl http://[INGRESS_IP]/echo/universe
+    curl http://$INGRESS_IP/echo/universe
 
     {"greeting":{"hostname":"helloworld-service-v1-286408581-9204h","greeting":"Hello universe from helloworld-service-v1-286408581-9204h with 1.0","version":"1.0"},"
     ```
