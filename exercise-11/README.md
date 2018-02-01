@@ -39,13 +39,40 @@ Istio mutual TLS authentication is enabled if the line `authPolicy: MUTUAL_TLS` 
 
 #### Trying out the authentication setup
 
-One way to try out the Istio with mutual TLS authentication turned on, is to use curl in one service’s envoy proxy to send request to other services. For example, after starting the Helloworld sample application you can ssh into the envoy container of Helloworld service, and send request to guestbook service by curl.
+One way to try out the mutual TLS authentication communication, is to use curl in one service’s envoy proxy to send request to other services. For example, after starting the Helloworld application you can ssh into the envoy container of Helloworld service, and send request to guestbook service by curl.
 
 1. get the Helloworld pod name
 ```sh
 kubectl get pods -l app=helloworld-service
 ```
+```sh
+NAME                                     READY     STATUS    RESTARTS   AGE
+helloworld-service-v1-8684f48ccb-ntn7g   2/2       Running   0          1d
+helloworld-service-v2-8648cf8d96-n4bxr   2/2       Running   0          1d
+```
+Make sure the pod is “Running”.
 
+2. ssh into the envoy container
+```sh
+kubectl exec -it helloworld-service-v1-xxxxxxxxxx -c istio-proxy /bin/bash
+```
+Make sure to change the pod name into the corresponding one on your system. This command will ssh into istio-proxy container(sidecar) of the pod.
+
+3. check out the keys
+```sh
+ls /etc/certs/ 
+```
+You should see
+```sh
+cert-chain.pem   key.pem   root-cert.pem
+```
+Note that cert-chain.pem is envoy’s cert that needs to present to the other side. key.pem is envoy’s private key paired with cert-chain.pem. root-cert.pem is the root cert to verify the other side’s cert. Currently we only have one CA, so all envoys have the same root-cert.pem.   
+
+4. send request to the guestbook-ui service
+```sh
+curl https://guestbook-ui:80/echo/silly -v --key /etc/certs/key.pem --cert /etc/certs/cert-chain.pem --cacert /etc/certs/root-cert.pem -k
+```
+```sh
 
 
 
