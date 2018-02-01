@@ -39,6 +39,14 @@ Istio mutual TLS authentication is enabled if the line `authPolicy: MUTUAL_TLS` 
 
 #### Trying out the authentication setup
 
+One way to try out the Istio with mutual TLS authentication turned on, is to use curl in one service’s envoy proxy to send request to other services. For example, after starting the Helloworld sample application you can ssh into the envoy container of Helloworld service, and send request to guestbook service by curl.
+
+1. get the Helloworld pod name
+```sh
+kubectl get pods -l app=helloworld-service
+```
+
+
 
 
 
