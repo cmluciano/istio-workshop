@@ -72,8 +72,16 @@ Note that cert-chain.pem is envoy’s cert that needs to present to the other si
 ```sh
 curl https://guestbook-ui:80/echo/silly -v --key /etc/certs/key.pem --cert /etc/certs/cert-chain.pem --cacert /etc/certs/root-cert.pem -k
 ```
-```sh
+From the output there will be some error message `error fetching CN from cert:The requested data were not available`. This is expected. 
+Go to the bottom and there is the 200 code.
 
+```sh
+< HTTP/1.1 200 OK
+< x-application-context: helloworld-service
+< content-type: application/json;charset=UTF-8
+< date: Thu, 01 Feb 2018 06:12:46 GMT
+...
+```
 
 
 
