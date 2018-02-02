@@ -70,7 +70,7 @@ Note that cert-chain.pem is envoy’s cert that needs to present to the other si
 
 4. send request to the guestbook-ui service
 ```sh
-curl https://guestbook-ui:80/echo/silly -v --key /etc/certs/key.pem --cert /etc/certs/cert-chain.pem --cacert /etc/certs/root-cert.pem -k
+curl https://guestbook-ui:80/echo/tls -v --key /etc/certs/key.pem --cert /etc/certs/cert-chain.pem --cacert /etc/certs/root-cert.pem -k
 ```
 From the output there will be some error message `error fetching CN from cert:The requested data were not available`. This is expected. 
 Go to the bottom and there you will see the success message.
