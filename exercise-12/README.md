@@ -12,3 +12,4 @@ IBM Front Door is IBM container service Ingress controller which is an enhanceme
 * Highly Available Ingress Controller
 
 In this exercise we'll try out adding domain name to services.
+
