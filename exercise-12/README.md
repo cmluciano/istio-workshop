@@ -102,6 +102,6 @@ backend:
    serviceName: istio-ingress
    servicePort: 80
 ```
-Which corresponds to the `guestbook-ui` in istio ingress.
-Now let's access the guestbook service. Try `http://[clustername].us-east.containers.mybluemix.net` and you'll see the guestbook gui.
-And go on with `http://zipkin.[clustername].us-east.containers.mybluemix.net` and `http://grafana.[clustername].us-east.containers.mybluemix.net` to access the zipkin and grafana services.
+Which corresponds to the `guestbook-ui` in istio ingress.   
+Now let's access the guestbook service. Try `http://[clustername].us-east.containers.mybluemix.net` and you'll see the guestbook gui.   
+And go on with `http://zipkin.[clustername].us-east.containers.mybluemix.net` and `http://grafana.[clustername].us-east.containers.mybluemix.net` to access the zipkin and grafana services.   
