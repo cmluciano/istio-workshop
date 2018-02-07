@@ -21,7 +21,7 @@ kubectl delete all --all
 3. Add the `istioctl` client to your PATH. For example, run the following command on a MacOS or Linux system:
 
    ```
-   export PATH=$PWD/istio-0.2.12/bin:$PATH
+   export PATH=$PWD/istio-[version]/bin:$PATH
    ```
 
 ### Install Istio on the Kubernetes cluster
@@ -29,7 +29,7 @@ kubectl delete all --all
 1. Change the directory to the Istio file location.
 
    ```
-   cd [path_to_istio-0.2.12]
+   cd [path_to_istio-version]
    ```
 
 2. Install Istio on the Kubernetes cluster.
