@@ -25,14 +25,14 @@ istioctl kube-inject -f guestbook/helloworld-deployment.yaml
 This adds the Istio Proxy as an additional container to the Pod and setups the necessary configuration. Inside the YAML there is now an additional container:
 
 ```
-image: docker.io/istio/proxy_debug:0.2.12
+image: docker.io/istio/proxy_debug:[version]
 imagePullPolicy: IfNotPresent
 name: istio-proxy
 ```
 
 #### Automatic sidecar injection
 
-Istio sidecars can also be automatically injected into a pod before deployment using an alpha feature in Kubernetes called Initializers. The istio-sidecar InitializerConfiguration is resource that specifies resources where Istio sidecar should be injected. By default, the Istio sidecar will be injected into deployments, statefulsets, jobs, and daemonsets. This is set up by running the following from the `istio-0.2.12` dir:
+Istio sidecars can also be automatically injected into a pod before deployment using an alpha feature in Kubernetes called Initializers. The istio-sidecar InitializerConfiguration is resource that specifies resources where Istio sidecar should be injected. By default, the Istio sidecar will be injected into deployments, statefulsets, jobs, and daemonsets. This is set up by running the following from the `istio-[version]` dir:
 
 ```sh
 kubectl apply -f install/kubernetes/istio-initializer.yaml
