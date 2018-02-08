@@ -103,4 +103,3 @@ See the overview of Mixer at [istio.io](https://istio.io/docs/concepts/policy-an
     istioctl delete -f guestbook/mixer-rule-denial-v2.yaml
     ```
 #### [Continue to Exercise 11 - Security](../exercise-11/README.md)
-Congratulations! You have finished the lab. If you want to find out more about Istio, try out more advanced features, or follow more examples and guides, you can find all this and more at https://istio.io/docs/.
