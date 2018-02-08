@@ -104,4 +104,7 @@ backend:
 ```
 Which corresponds to the `guestbook-ui` in istio ingress.   
 Now let's access the guestbook service. Try `http://[clustername].us-east.containers.mybluemix.net` and you'll see the guestbook gui.   
-And go on with `http://zipkin.[clustername].us-east.containers.mybluemix.net` and `http://grafana.[clustername].us-east.containers.mybluemix.net` to access the zipkin and grafana services.   
+And go on with `http://zipkin.[clustername].us-east.containers.mybluemix.net` and `http://grafana.[clustername].us-east.containers.mybluemix.net` to access the zipkin and grafana services.  
+
+Congratulations! You have finished the lab. If you want to find out more about Istio, try out more advanced features, or follow more examples and guides, you can find all this and more at https://istio.io/docs/.
+
