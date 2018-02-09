@@ -31,6 +31,11 @@ kubectl delete all --all
    ```
    cd [path_to_istio-version]
    ```
+Before we proceed, we need to make a change to the docker image of istio proxy to enable `curl`. This will become useful in the tls exercise.
+
+```sh
+sed -i -e 's/docker.io\/istio\/proxy:/docker.io\/istio\/proxy_debug:/g' install/kubernetes/istio-auth.yaml 
+```
 
 2. Install Istio on the Kubernetes cluster.
 
