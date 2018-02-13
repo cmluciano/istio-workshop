@@ -74,5 +74,12 @@ If you look at the pod status, some of the pods will show a `Pending` state. Tha
     kubectl get pods -o wide
     ```
 
+### Clean up
+ 
+Start with a clean slate by deleting all deployed services from the cluster.
+
+```sh
+kubectl delete all --all
+```
 
 #### [Continue to Exercise 5 - Installing Istio](../exercise-5/README.md)
