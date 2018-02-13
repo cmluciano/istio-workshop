@@ -69,5 +69,16 @@ Your IBM Cloud paid account and your Kubernetes cluster have been pre-provisione
     bx cs workers guestbook
     bx cs worker-get [worker name]
     ```
+### Clone the lab repo
+
+From your command line, run:
+   
+```    
+git clone https://github.com/szihai/istio-workshop/tree/indexsf
+
+cd istio-workshop
+```
+
+This is the working directory for the lab.
 
 #### [Continue to Exercise 2 - Deploying a microservice to Kubernetes](../exercise-2/README.md)
