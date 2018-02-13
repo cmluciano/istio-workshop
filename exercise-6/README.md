@@ -30,16 +30,6 @@ imagePullPolicy: IfNotPresent
 name: istio-proxy
 ```
 
-#### Automatic sidecar injection
-
-Istio sidecars can also be automatically injected into a pod before deployment using an alpha feature in Kubernetes called Initializers. The istio-sidecar InitializerConfiguration is resource that specifies resources where Istio sidecar should be injected. By default, the Istio sidecar will be injected into deployments, statefulsets, jobs, and daemonsets. This is set up by running the following from the `istio-[version]` dir:
-
-```sh
-kubectl apply -f install/kubernetes/istio-initializer.yaml
-```
-
-This adds `sidecar.initializer.istio.io` to the Kubernetes list of pending initializers in the workload. The istio-initializer controller observes resources as they are deployed to Kubernetes and automatically injects the Istio Proxy sidecar by injecting the sidecar template.
-
 ### Deploy Guestbook services
 
 To demonstrate Istio, we’re going to use [this guestbook example](https://github.com/retroryan/spring-boot-docker). This example is built with Spring Boot, a frontend using Spring MVC and Thymeleaf, and two microservices. The 3 microservices that we are going to deploy are:
