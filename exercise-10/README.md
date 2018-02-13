@@ -1,4 +1,4 @@
-# Exercise 10 - Fault injection and rate limiting
+# Exercise 10 - Service Isolation
 
 #### Overview of Istio Mixer
 
