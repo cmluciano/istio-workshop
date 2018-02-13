@@ -15,6 +15,8 @@
 - [Exercise 8 - Telemetry](exercise-8/README.md)
 - [Exercise 9 - Request routing and canary deployments](exercise-9/README.md)
 - [Exercise 10 - Fault injection and rate limiting](exercise-10/README.md)
+- [Exercise 11 - Security](exercise-11/README.md)
+- [Exercise 12 - Integrate with Front Door](exercise-12/README.md)
 
 
 ## Credits
