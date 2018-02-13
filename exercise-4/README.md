@@ -76,7 +76,7 @@ If you look at the pod status, some of the pods will show a `Pending` state. Tha
 
 ### Clean up
  
-Start with a clean slate by deleting all deployed services from the cluster.
+Clean up by deleting all deployed services from the cluster.
 
 ```sh
 kubectl delete all --all
