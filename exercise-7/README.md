@@ -43,7 +43,7 @@ A Kubernetes Ingress rule can be created that routes external requests through t
 3. Export the external IP address from the previous command.
    
     ```sh
-    export INGRESS_IP=[external_IP]
+    INGRESS_IP=$(kubectl get ing | grep simple-ingress | awk '{ print $3 }')
     ```
 
 4. Use the INGRESS IP to see the guestbook UI in a browser: `http://INGRESS_IP`. You can also access the Hello World service and see the JSON in the browser: `http://INGRESS_IP/hello/world`.
