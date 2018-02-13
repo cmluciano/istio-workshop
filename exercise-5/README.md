@@ -1,13 +1,5 @@
 # Exercise 5 - Installing Istio
 
-### Clean up
- 
-Start with a clean slate by deleting all deployed services from the cluster.
-
-```sh
-kubectl delete all --all
-```
-
 ### Download Istio
 
 1. Either download Istio directly from https://github.com/istio/istio/releases or get the latest version using curl:
