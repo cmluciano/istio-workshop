@@ -11,7 +11,8 @@
 2. Extract the installation files.
    
 3. Add the `istioctl` client to your PATH. For example, run the following command on a MacOS or Linux system:
-   ** change the [version] to current cersion
+   
+   **change the [version] to current cersion
 
    ```
    export PATH=$PWD/istio-[version]/bin:$PATH
